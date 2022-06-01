@@ -74,7 +74,7 @@ for ($ia=0; $ia < $jumlah; $ia++) {
                     $curl->post('https://smshub.org/stubs/handler_api.php', 'action=getCurrentActivations&api_key='.$key.'&order=id&orderBy=asc&start=0&length=10');
                     $otpBos = json_decode($curl->response)->array[0]->code;
                     $getOTP++;
-                        if ($getOTP == 10) {
+                        if ($getOTP == 0) {
                             echo ".";
                             $getOTP = 0;
                         }
@@ -126,7 +126,7 @@ for ($ia=0; $ia < $jumlah; $ia++) {
                                     $curl->post('https://smshub.org/stubs/handler_api.php', 'action=getCurrentActivations&api_key='.$key.'&order=id&orderBy=asc&start=0&length=10');
                                     $otpBos1 = json_decode($curl->response)->array[0]->code;
                                     $getOTP1++;
-                                        if ($getOTP1 == 10) {
+                                        if ($getOTP1 == 0) {
                                             echo ".";
                                             $getOTP1 = 0;
                                         }
